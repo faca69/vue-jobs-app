@@ -1,8 +1,7 @@
 <script setup>
-import jobData from "@/jobs.json";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import axios from "axios";
 import JobListing from "./JobListing.vue";
-const jobs = ref(jobData);
 defineProps({
   limit: Number,
   showButton: {
@@ -10,6 +9,9 @@ defineProps({
     default: false,
   },
 });
+const jobs = ref([]);
+
+onMounted(() => {});
 </script>
 
 <template>
